@@ -1,0 +1,177 @@
+body
+{
+	background: black;
+	color: #ffecc3;
+	height: 100%;
+	width: 100%;
+}
+
+
+
+#bg
+{
+	height: 100%;
+	position: absolute;
+	width: 100%;	
+}
+
+	#bg img
+	{
+		height: 100%;
+		opacity: 0;
+		position: absolute;
+		width: 100%;
+	}
+	
+	#bg img:first-child
+	{
+		opacity: 1;
+	}	
+	
+#contenedor
+{
+	width: 100%;
+}
+
+#contenido
+{
+	display: none;	
+	margin: 0 auto;
+	padding: 150px 0 0 0;
+	position: relative;
+	width: 50%;
+}
+		
+	.relato:not(.actual)
+	{
+		display: none;
+	}
+
+	.relato.penultimo,
+	.relato.primero
+	{
+		text-align: center;
+	}
+
+		.relato p
+		{
+			font: normal 18px Ubuntu, Arial, sans-serif;
+			line-height: 36px;
+			margin: 0;	
+		}
+
+			.relato p b
+			{
+				color: #39F;
+				cursor: pointer;
+				font-weight: normal;
+			}
+			
+			.relato p b:hover
+			{
+				text-decoration: underline;
+			}
+			
+			.relato.penultimo p b
+			{
+				font: normal 35px Varela, Arial, sans-serif;
+			}
+			
+		#mascara
+		{
+			cursor: pointer;
+			height: 182px;
+			margin: 0 auto;
+			overflow: visible;
+			position: relative;
+			width: 130px;
+		}
+		
+			#mascara img:first-child
+			{	
+				left: 50%;
+				margin: -184.5px 0 0 -150px;
+				position: absolute;
+				top: 50%;
+				z-index: 1000;
+			}
+			
+			#mascara img:last-child
+			{
+				position: relative;
+				z-index: 2000;	
+			}
+
+		#logo
+		{
+			bottom: 12%;
+			display: none;
+			left: 50%;
+			margin-left: -199px;
+			position: absolute;
+		}
+	
+	#flecha
+	{
+		bottom: 30px;
+		cursor: pointer;
+		height: 36px;
+		left: 30px;
+		opacity: 0;
+		position: absolute;	
+		width: 50px;
+		z-index: 2000;
+	}
+
+	#control-audio
+	{
+		bottom: 30px;
+		cursor: pointer;
+		height: 41px;
+		right: 30px;
+		opacity: 0.5;
+		position: absolute;	
+		transition: all 0.2s ease;
+		width: 50px;
+		z-index: 2000;
+	}
+
+	#control-audio:hover
+	{
+		opacity: 1;	
+	}
+        .triviaFondo{
+            position:absolute;
+            _position:absolute; /* caso especial para IE 6*/
+            height:100%;
+            width:100%;
+            top:0;
+            left:0;
+            background:#000000;
+            border:1px solid #cecece;
+            z-index:9999;
+        }
+        .trivia{
+            position:absolute;
+            _position:absolute; /* caso especial para IE 6*/
+            height:95%;
+            width:95%;
+            background:#FFFFFB;
+            border:2px solid #cecece;
+            z-index:20001;
+            top:5%;
+            left:5%;
+            padding:12px;
+            font-size:13px;
+        }
+        .triviaCerrar{
+            font-size:14px;
+            line-height:14px;
+            right:6px;
+            top:4px;
+            position:absolute;
+            color:#6fa5fd;
+            font-weight:700;
+            display:block;
+        }        
+
