@@ -26,9 +26,9 @@
         return $GLOBALS["reg"]["r4"];
     }
     function verificar($respuesta){
-        return ($respuesta == $GLOBALS["reg"]["rc"]);
+        return (strcmp($respuesta, $GLOBALS["reg"]["rc"]));
+                
+                
     }
     
-
-
 ?>

@@ -1,3 +1,19 @@
+$(document).on("click","b",function(){
+    $.ajax({
+        type:"POST",
+        url:"verificar.php",
+        data: {rid: $(this).attr("id"),},
+        success: function( respuesta ){
+            alert(respuesta);
+            if (respuesta === "ok")
+                alert("bien");
+            else
+                alert("mal");
+        }});
+});
+
+
+
 //Configuramos el evento de carga de página, se ejecuta solamente 1 vez cuando la página cargo por completo
 $(document).ready(function(){
     centraVentana();

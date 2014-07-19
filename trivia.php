@@ -18,10 +18,19 @@ and open the template in the editor.
 
     </head>
     <body>
-        <h1>Trivia.php</h1> 
         
         <div id="popup">
             <p>Soy un popup flotante. puedes <a href="javascript: cerrarPopup('popup');">cerrarme</a> si quieres</p>
+            
+            <?php 
+                include("trivias.php"); 
+                $reg = conectar(1);
+                echo get_pregunta(),"<br>";
+                echo "<b id=1>",get_r1(),"</b><br>";
+                echo "<b id=2>",get_r2(),"</b><br>";
+                echo "<b id=3>",get_r3(),"</b><br>";
+                echo "<b id=4>",get_r4(),"</b><br>";
+            ?>
         </div>
         <script>
         function cerrarPopup(pid)
@@ -34,20 +43,16 @@ and open the template in the editor.
         {
            position: absolute;
            border: 1px solid #666666;
-           background-color:#900000;
+           background-color:#FFFFFF;
+           background-colors:#292A3B;
            width: 90%;
            height: 90%;
-           margin-top: 50px;
            top: 5%;
            left: 5%;
            z-index: 1;
         }
         </style>
         
-        <?php 
-            include("trivias.php"); 
-            $reg = conectar(1);
-            echo "- ",get_pregunta();
-        ?>
+
     </body>
 </html>
