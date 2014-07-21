@@ -27,24 +27,17 @@ and open the template in the editor.
         <!-- INTERACCIONES -->
 
         <script type="text/javascript" src="./aventura_de_texto.js" ></script>     
-        <script type="text/javascript" src="./trivia.js"></script>
         
         
     </head>
     <body>
 
-        
-        <div id="bg">
-            <img src="./files/00.png">
-            <img src="./files/glow_bosque.png" width="1500" height="907">
-        </div>
-        
-        <div id="contenedor"> <!-- Comienza CONTENEDOR -->
-            <div id="contenido" style="display: block;"> <!-- Comienza CONTENIDO -->
 
+        
+        <div id="contenedor" style="height: 967px;"> <!-- Comienza CONTENEDOR -->
                 <div id="relatos"> <!-- Comienza RELATOS -->
                                         
-                    <div class="relato actual primero">
+                    <div class="relato actual primero" >
                         <p id="parrafo">
                             
                         </p>
@@ -61,8 +54,6 @@ and open the template in the editor.
                         document.getElementById("parrafo").innerHTML = arrayJS[1];
                     </script>
                 </div>
-
-            </div>
         </div>
 
     </body>

@@ -1,3 +1,4 @@
+
 body
 {
 	background: black;
@@ -5,8 +6,6 @@ body
 	height: 100%;
 	width: 100%;
 }
-
-
 
 #bg
 {
@@ -140,38 +139,3 @@ body
 	{
 		opacity: 1;	
 	}
-        .triviaFondo{
-            position:absolute;
-            _position:absolute; /* caso especial para IE 6*/
-            height:100%;
-            width:100%;
-            top:0;
-            left:0;
-            background:#000000;
-            border:1px solid #cecece;
-            z-index:9999;
-        }
-        .trivia{
-            position:absolute;
-            _position:absolute; /* caso especial para IE 6*/
-            height:95%;
-            width:95%;
-            background:#FFFFFB;
-            border:2px solid #cecece;
-            z-index:20001;
-            top:5%;
-            left:5%;
-            padding:12px;
-            font-size:13px;
-        }
-        .triviaCerrar{
-            font-size:14px;
-            line-height:14px;
-            right:6px;
-            top:4px;
-            position:absolute;
-            color:#6fa5fd;
-            font-weight:700;
-            display:block;
-        }        
-

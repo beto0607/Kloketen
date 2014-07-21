@@ -1,0 +1,264 @@
+body
+{
+	background: black;
+	color: #378484;
+}
+
+
+#bg,
+#bg img
+{
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+#bg img
+{
+	display: none;
+}
+@media all and (min-width: 1367px) {
+
+#bg img:nth-child(1),
+#glow_bosque img:nth-child(1)
+{
+	display: block;	
+}
+
+}
+
+@media all and (min-width: 1025px) and (max-width: 1366px){
+
+#bg img:nth-child(2),
+#glow_bosque img:nth-child(2)
+{
+	display: block;	
+}
+
+}
+
+@media all and (min-width: 801px) and (max-width: 1024px){
+
+#bg img:nth-child(3),
+#glow_bosque img:nth-child(3)
+{
+	display: block;	
+}
+
+}
+
+@media all and (max-width: 800px){
+
+#bg img:nth-child(4),
+#glow_bosque img:nth-child(4)
+{
+	display: block;	
+}
+
+}
+
+#glow_bosque
+{
+	opacity: 0;
+	transition: all 1.5s ease-in-out;
+}
+	
+#glow_bosque,
+#glow_bosque img
+{
+	height: 100%;
+	position: absolute;
+	width: 100%;		
+}
+
+#glow_bosque img
+{
+	display: none;	
+}
+
+#relatos
+{
+	display: none;	
+	left: 50%;
+	position: absolute;
+	top: 50%;
+}
+	
+	.relato
+	{
+		text-align: center;
+	}
+		
+	.relato:not(.actual)
+	{
+		display: none;
+	}
+
+		.relato p
+		{
+			font: normal 16px Varela, Arial, sans-serif;
+			line-height: 19.2px;
+			margin: 19.2 0 0 0;	
+		}
+
+			.relato p b
+			{
+				color: #00FFFF;
+				cursor: pointer;
+				font-weight: normal;
+			}
+			
+			.relato p b:hover
+			{
+				text-decoration: underline;
+			}
+			
+		#mascara
+		{
+			cursor: pointer;
+			height: 210px;
+			margin: 0 auto;
+			overflow: visible;
+			position: relative;
+			width: 116px;
+		}
+		
+			#mascara img:first-child
+			{	
+				left: 50%;
+				margin: -252.5px 0 0 -182px;
+				position: absolute;
+				top: 50%;
+				z-index: 1000;
+			}
+			
+			#mascara img:last-child
+			{
+				position: relative;
+				z-index: 2000;	
+			}
+
+		#logo
+		{
+			display: none;
+			left: 50%;
+			margin-left: -175px;
+			position: absolute;
+		}
+		
+		@media all and (min-width: 1367px) {
+
+		#logo
+		{
+			bottom: 22%;
+		}
+		
+		}
+		
+		@media all and (min-width: 801px) and (max-width: 1366px){
+		
+		#logo
+		{
+			bottom: 10%;
+		}
+		
+		}
+		
+		@media all and (max-width: 800px){
+		
+		#logo
+		{
+			bottom: 3%;
+		}
+		
+		}
+	
+	#flecha
+	{
+		bottom: 30px;
+		cursor: pointer;
+		height: 33px;
+		left: 30px;
+		opacity: 0.3;
+		position: absolute;	
+		transition: all 0.2s ease;
+		width: 33px;
+		z-index: 2000;
+	}
+	
+	#flecha:hover
+	{
+		opacity: 1;	
+	}
+	
+	#control-audio
+	{
+		bottom: 30px;
+		cursor: pointer;
+		height: 33px;
+		right: 30px;
+		opacity: 0.3;
+		position: absolute;	
+		transition: all 0.2s ease;
+		width: 33px;
+		z-index: 2000;
+	}
+
+	#control-audio:hover
+	{
+		opacity: 1;	
+	}
+	
+	#relato
+	{
+		bottom: 30px;
+		cursor: pointer;
+		display: none;
+		height: 33px;
+		right: 30px;
+		opacity: 0.3;
+		position: absolute;	
+		transition: all 0.2s ease;
+		width: 33px;
+		z-index: 2000;
+	}
+	
+	#relato:hover
+	{
+		opacity: 1;	
+	}
+        .triviaFondo{
+            position:absolute;
+            _position:absolute; /* caso especial para IE 6*/
+            height:100%;
+            width:100%;
+            top:0;
+            left:0;
+            background:#000000;
+            border:1px solid #cecece;
+            z-index:9999;
+        }
+        .trivia{
+            position:absolute;
+            _position:absolute; /* caso especial para IE 6*/
+            height:95%;
+            width:95%;
+            background:#FFFFFB;
+            border:2px solid #cecece;
+            z-index:20001;
+            top:5%;
+            left:5%;
+            padding:12px;
+            font-size:13px;
+        }
+        .triviaCerrar{
+            font-size:14px;
+            line-height:14px;
+            right:6px;
+            top:4px;
+            position:absolute;
+            color:#6fa5fd;
+            font-weight:700;
+            display:block;
+        }        
+

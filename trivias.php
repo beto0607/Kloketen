@@ -1,6 +1,7 @@
 <?php
 
-    function conectar($id){
+    function conectar(){
+        $id = filter_input(INPUT_POST, "id");
         mysql_connect("localhost","root","asd45asd");
         mysql_select_db("trivias");
         $result = mysql_query("SELECT * FROM trivia WHERE id=$id");
@@ -30,5 +31,5 @@
                 
                 
     }
-    
+    conectar();
 ?>

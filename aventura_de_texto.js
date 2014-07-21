@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 var id_adv=1;
-var timeout;
-function timer() {
-    timeout = window.setTimeout(animarMascara, 0);
+function centrar(){
+        var ancho = ($("#relatos").find(".parrafo").width() / 2);
+        var altura = ($("#relatos").find(".parrafo").height() / 2);
+        $("#relatos").css({"margin-top": -altura, "margin-left": -ancho});		
 }
-
-function animarMascara(){}
+$(document).ready(function(){
+    $("#relatos").fadeIn(1000);
+    centrar();  
+});
 
 $(document).on("click", ".relato b",function(){
     id = $(this).attr("id");
@@ -19,18 +22,15 @@ $(document).on("click", ".relato b",function(){
             $(this).fadeIn(1000);
             document.getElementById("parrafo").innerHTML = arrayJS[id];
     });
-    if(id>0){
-        var element = document.createElement("div");
-        element.setAttribute("id","trivia");
-        element.setAttribute("src", "./trivia.js");
-        element.setAttribute("class","trivia" );
-        var aux = document.createTextNode("Hola...");
-        element.appendChild(aux);
-        $(document.getElementById("contenido")).append(element);
-        
-        element = document.createElement("div");
-        element.setAttribute("id","triviaFondo");
-        element.setAttribute("src", "./trivia.js");
-        $(document.getElementById("contenido")).append(element);
-    }
+
+});
+
+$(document).on("click",".relato trivia",function(){
+    id = $(this).attr("id");
+    hacia = $(this).attr("hacia");
+    $.ajax({
+    type:"POST",
+    url:"trivia.php",
+    data: {id: id,},
+    });
 });
