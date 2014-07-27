@@ -1,0 +1,141 @@
+/* 
+    Created on : 23/07/2014, 14:32:50
+    Author     : beto0607
+*/
+body{
+    background: #000000;
+    background-image: url(fondo.png);
+    background-repeat: repeat;
+}
+
+#parrafo{
+    color: #B8EAEB;
+    display: table;
+    position: absolute;
+    margin: auto;
+    left: 35vw;
+    top: 20vh;
+    font: normal 22px Ubuntu, Arial, sans-serif;
+    font-size: 2vmin;
+    text-align: justify;
+    width: 50vw;
+    
+}
+
+.relato b{
+    color: #00FFFF;
+    cursor: pointer;
+    
+    font-weight: bold;
+}
+.relato p b:hover
+{
+        text-decoration: underline;
+}
+    #mision{
+        position: fixed;
+        background: #08080D;
+        border-radius: 25px;
+        width: 20vw;
+        height: auto;
+        margin-left: 5vmin;
+        margin-top: 2vmin; 
+        border: 0.1vw solid #29294C;
+    }
+
+        /* MASCARA */	
+
+        #mascara{
+                -webkit-animation: animarMascara 3s infinite ease-in-out;
+                -webkit-animation-play-state: paused;
+                animation: animarMascara 3s infinite ease-in-out;
+                animation-play-state: paused;
+                cursor: pointer;
+                
+                position: relative;
+                width: 40vmin;
+
+                display: block;
+
+        
+        }
+
+        #mascara.animar{
+                -webkit-animation-play-state: running;
+                animation-play-state: running;
+        }
+
+        @-webkit-keyframes animarMascara{
+                0%{ top: 0 }
+                50%{ top: -9vh }
+                100%{ top: 0 }
+        }
+
+        @keyframes animarMascara{ 
+                0%{ top: 0 }
+                50%{ top: -9vmin }
+                100%{ top: 0 }
+        }
+        #nombre_mision{
+            color: #FFFFFF;
+            font: normal 20px Ubuntu, Arial, sans-serif;
+            
+            display: table;
+            margin-top: 5vmin;
+            margin-bottom: 10vmin;
+            margin-left: auto; 
+            margin-right: auto;
+            font-size: 2vmin;
+        }
+        #button_volver{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #0D0E15;
+            padding: 8px 20px;
+            background: #08080D;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            border-radius: 20px;
+            border: 1px solid #0D0E15;
+            margin-top: 2vmin;
+            margin-bottom: 5vmin;
+            margin-left: auto; 
+            margin-right: auto;
+            display: table;
+        }
+        
+    #header{
+
+        background: #29294C;
+        height: 17vmin;
+        width: 100vmax;
+    }
+        #home{ 
+            cursor: pointer;
+            overflow: visible;
+            display: inline;
+            margin: 1vmax;
+            margin-left: 5vmin;
+            width: 45vmin;
+            
+        }
+        #nombre{
+            text-align: left;
+            position: absolute;
+            margin-top: 30px;
+            right: 10%;
+            color: #ffffff;    
+            font: normal 20px Ubuntu, Arial, sans-serif;
+            font-size: 2vmin;
+        }
+        #guarda{
+            border-top: 0px;
+            border-bottom: 3vmin transparent solid;    
+            border-image: url(guarda.jpg) 300 1 repeat;
+            -webkit-border-image: url(guarda.jpg) 300 1 repeat; /* Safari 5 */
+            -o-border-image: url(guarda.jpg) 300 1 repeat; /* Opera 10.5-12.1 */
+            -moz-border-image: url(guarda.jpg) 300 32 16 1 / thick ;
+            
+            
+        }
+     
