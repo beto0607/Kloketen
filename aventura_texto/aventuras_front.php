@@ -42,6 +42,7 @@ desc: antes de llamar se deben hacer 3 INPUT_POST, id_db: el id de la aventura, 
             </div>
             <div class="relato" >
                 <p id="parrafo">
+                    <iframe id="trivia" hidden="true" ></iframe>
                 </p>
                 <?php require_once("./aventuras_back.php"); ?>
                 <?php 
@@ -54,6 +55,7 @@ desc: antes de llamar se deben hacer 3 INPUT_POST, id_db: el id de la aventura, 
                 </script>
             </div>
         </div>
+        
         <?php
         // put your code here
         ?>

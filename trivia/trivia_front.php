@@ -23,13 +23,17 @@ and open the template in the editor.
         <?php 
             require_once ("./trivia_back.php");
         ?>
-        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Launch demo modal</a>
         
+        <script type="text/javascript">
+            $(window).load(function(){
+                $('#myModal').modal('show');
+            });
+        </script>
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header" style="border-bottom-color: #0B0B13">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title" style="text-align: center;"><?php echo get_pregunta(); ?></h4>
                     </div>
@@ -37,27 +41,27 @@ and open the template in the editor.
                         <div id="opciones">
                             <input type="radio" name="respuesta" value="1">
                             <br>
-                            <?php echo get_r1(); ?>
+                            <?php echo get_r1(),""; ?>
                         </div>
                         <div id="opciones">
                             <input type="radio" name="respuesta" value="2">
                             <br>
-                            <?php echo get_r2(); ?>
+                            <?php echo get_r2(),""; ?>
                         </div>
                         <div id="opciones">
                             <input type="radio" name="respuesta" value="3">
                             <br>
-                            <?php echo get_r3(); ?>
+                            <?php echo get_r3(),""; ?>
                         </div>
                         <div id="opciones">
                             <input type="radio" name="respuesta" value="4">
                             <br>
-                            <?php echo get_r4(); ?>
+                            <?php echo get_r4(),"aaaaaaaaaaaaaaaaaaaaaaa"; ?>
                         </div>
                         
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Responder</button>
+                    <div class="modal-footer" style="border: 0px;">
+                        <button type="button" class="btn btn-primary" id="btn_responder">Responder</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
