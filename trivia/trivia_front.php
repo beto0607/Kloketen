@@ -12,7 +12,6 @@ and open the template in the editor.
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="trivia.js"></script>
         <!-- CSS -->
-
         <link rel="stylesheet" type="text/css" href="./trivia.css" media="screen">
         <!-- Bootstrap -->
         <link href="bootstrap.css" rel="stylesheet">
@@ -56,7 +55,7 @@ and open the template in the editor.
                         <div id="opciones">
                             <input type="radio" name="respuesta" value="4">
                             <br>
-                            <?php echo get_r4(),"aaaaaaaaaaaaaaaaaaaaaaa"; ?>
+                            <?php echo get_r4(),""; ?>
                         </div>
                         
                     </div>

@@ -5,11 +5,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//$mision = filter_input(INPUT_POST, "mision");
-$mision=1;
+$mision = filter_input(INPUT_POST, "mision");
+
 mysql_connect("localhost","beto0607","asd45asd");
 mysql_select_db("trivias");
-$result = mysql_query("SELECT * FROM trivia WHERE id=1");
+$result = mysql_query("SELECT * FROM trivia WHERE id=$mision");
 //$random = rand(0, array_count_values($result));
 $reg = mysql_fetch_array($result,MYSQL_BOTH);
 //return $reg[$random];

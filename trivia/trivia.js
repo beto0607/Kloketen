@@ -5,6 +5,23 @@
  */
 
 
+$(document).on("click","#btn_responder",function(){
+    var aux = document.getElementsByName("respuesta");
+    var r;
+    for(var i=0; i<aux.length;i++){
+        if(aux[i].checked){
+           r=i; 
+        }
+    }
+    
+    $.ajax({
+        type:"POST",
+        url:"../trivia/trivia.php",
+        data: {respondio:r}
+    })
+
+});
+
 
 $(".modal-wide").on("show.bs.modal", function() {
   var height = $(window).height() - 200;

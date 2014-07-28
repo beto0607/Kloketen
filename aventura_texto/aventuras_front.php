@@ -12,37 +12,29 @@ desc: antes de llamar se deben hacer 3 INPUT_POST, id_db: el id de la aventura, 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="aventuras.js"></script>
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="./normalize.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="./font.face.css" media="screen">
+
         <link rel="stylesheet" type="text/css" href="./aventuras.css" media="screen">
         <!-- Bootstrap -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <script type="text/javascript" src="./respond.js"></script>
         <script type="text/javascript" src="./bootstrap.min.js"></script>
-        <!-- HTML5 LOADER -->
-        <link rel="stylesheet" type="text/css" href="css/jquery.html5Loader.css" media="screen">
-        <script src="js/animations/jquery.html5Loader.circular.js"></script>
-        <script src="js/jquery.html5Loader.js"></script>
     </head>
     <body>
         
         <div id="header">
             <img id="home" src="./Logo2.png"></img>
             <text id="nombre">
-                <?php echo "asdf",filter_input(INPUT_POST, "name")?>
+                <?php echo filter_input($POST,"name");?>
             </text>
             <div id="guarda"></div>
         </div>
         <div id="contenedor" style="color: white"> <!-- Comienza CONTENEDOR -->
             <div id="mision">
                 <img id="mascara" class="animar" src="./mascara.png"></img>
-                <text id="nombre_mision"><?php echo "asdf",filter_input(INPUT_POST, "mision")?></text>
+                <text id="nombre_mision"><?php echo filter_input(INPUT_POST, "mision")?></text>
                 <button id="button_volver">Volver</button>
                    
             </div>
             <div class="relato" >
                 <p id="parrafo">
-                    <iframe id="trivia" hidden="true" ></iframe>
                 </p>
                 <?php require_once("./aventuras_back.php"); ?>
                 <?php 
@@ -55,7 +47,6 @@ desc: antes de llamar se deben hacer 3 INPUT_POST, id_db: el id de la aventura, 
                 </script>
             </div>
         </div>
-        
         <?php
         // put your code here
         ?>
