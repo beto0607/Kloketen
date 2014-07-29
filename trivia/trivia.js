@@ -6,6 +6,8 @@
 
 
 $(document).on("click",".btn",function(){
+
+
     
     var aux = document.getElementsByName("respuesta");
     
@@ -17,14 +19,21 @@ $(document).on("click",".btn",function(){
     }
     
     aux = document.getElementById("modal-body");
-    
     if(rc== r+1){
         aux.innerHTML = "<h4>¡Correcto!</h4>";
     }else{
         aux.innerHTML = "<h4>¡Incorreto!</h4>";
     }
-
+    aux = document.getElementById("btn_responder");
+    if(aux.innerHTML === "Otra pregunta"){
+        document.location.reload();
+    }else{
+        aux.innerHTML = "Otra pregunta";
+    }
 });
+
+
+
 
 
 $(".modal-wide").on("show.bs.modal", function() {

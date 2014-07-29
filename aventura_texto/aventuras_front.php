@@ -21,7 +21,7 @@ desc: antes de llamar se deben hacer 3 INPUT_POST, id_db: el id de la aventura, 
         <img id="back1" src="circulo1-fondo.png"></img>
         <img id="back2" src="circulo2-fondo.png"></img>
         <div id="header">
-            <img id="home" src="./Logo2.png"></img>
+            <img id="home" src="./Logo2.png" onclick="document.location='http://boemiz.com/shared-folder/kloketen/'"></img>
             <text id="nombre">
                 Alejandro Iparraguirre
             </text>
@@ -31,7 +31,7 @@ desc: antes de llamar se deben hacer 3 INPUT_POST, id_db: el id de la aventura, 
             <div id="mision">
                 <img id="mascara" class="animar" src="./mascara.png"></img>
                 <text id="nombre_mision">Arjé</text>
-                <button id="button_volver">Volver</button>
+                <button id="button_volver" onclick="document.location='http://boemiz.com/shared-folder/kloketen/'">Volver</button>
                    
             </div>
             <div class="relato" >

@@ -99,7 +99,7 @@ body{
         }
         #button_volver{
             font: normal 14px Ubuntu, Arial, sans-serif;
-            color: #0D0E15;
+            color: #29294C;
             padding: 8px 20px;
             background: #08080D;
             -moz-border-radius: 10px;
@@ -115,7 +115,7 @@ body{
         #button_volver:hover{
             font: normal 16px Ubuntu, Arial, sans-serif;
             
-            color: #0D0E15;
+            color: #29294C;
             padding: 8px 20px;
             margin-top: 2vmin;
             margin-bottom: 5vmin;

@@ -70,6 +70,7 @@ and open the template in the editor.
                     </div>
                     <div class="modal-footer" style="border: 0px;">
                         <button type="button" class="btn btn-primary" id="btn_responder">Responder</button>
+                        <button type="button" class="btn" id="btn_volver"onclick="document.location='http://boemiz.com/shared-folder/kloketen/'">Volver</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->

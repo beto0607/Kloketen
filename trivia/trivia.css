@@ -9,8 +9,19 @@
     border-radius: 10px;
     border-color: #000000;
 }
+#btn_volver{
+    
+    width: 100px;
+    margin-right: -moz-calc(100%/2 - 50px);
+    margin-right: -webkit-calc(100%/2 - 50px);
+    margin-right: calc(100%/2 - 50px);
+    background-color: #0B0B13;
+    color: #1C4A4A;
+    border-radius: 10px;
+    border-color: #000000;
+}
 
-#btn{
+.btn{
     text-align: center;
 }
 
