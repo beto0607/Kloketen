@@ -18,18 +18,19 @@ desc: antes de llamar se deben hacer 3 INPUT_POST, id_db: el id de la aventura, 
         <script type="text/javascript" src="./bootstrap.min.js"></script>
     </head>
     <body>
-        
+        <img id="back1" src="circulo1-fondo.png"></img>
+        <img id="back2" src="circulo2-fondo.png"></img>
         <div id="header">
             <img id="home" src="./Logo2.png"></img>
             <text id="nombre">
-                <?php echo filter_input($POST,"name");?>
+                Alejandro Iparraguirre
             </text>
             <div id="guarda"></div>
         </div>
         <div id="contenedor" style="color: white"> <!-- Comienza CONTENEDOR -->
             <div id="mision">
                 <img id="mascara" class="animar" src="./mascara.png"></img>
-                <text id="nombre_mision"><?php echo filter_input(INPUT_POST, "mision")?></text>
+                <text id="nombre_mision">Arjé</text>
                 <button id="button_volver">Volver</button>
                    
             </div>

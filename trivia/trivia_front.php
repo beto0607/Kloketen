@@ -27,6 +27,9 @@ and open the template in the editor.
             $(window).load(function(){
                 $('#myModal').modal('show');
             });
+            
+            var rc = <?php echo $GLOBALS["reg"]["rc"]?>
+            
         </script>
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -36,28 +39,34 @@ and open the template in the editor.
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title" style="text-align: center;"><?php echo get_pregunta(); ?></h4>
                     </div>
-                    <div class="modal-body">
-                        <div id="opciones">
-                            <input type="radio" name="respuesta" value="1">
-                            <br>
-                            <?php echo get_r1(),""; ?>
-                        </div>
-                        <div id="opciones">
-                            <input type="radio" name="respuesta" value="2">
-                            <br>
-                            <?php echo get_r2(),""; ?>
-                        </div>
-                        <div id="opciones">
-                            <input type="radio" name="respuesta" value="3">
-                            <br>
-                            <?php echo get_r3(),""; ?>
-                        </div>
-                        <div id="opciones">
-                            <input type="radio" name="respuesta" value="4">
-                            <br>
-                            <?php echo get_r4(),""; ?>
-                        </div>
-                        
+                    <div class="modal-body" id="modal-body">
+                        <?php 
+                            echo '<div id="opciones">
+                                <input type="radio" name="respuesta" value="1">
+                                <br>
+                                ',get_r1(),'
+                            </div>';
+                            echo '<div id="opciones">
+                                <input type="radio" name="respuesta" value="1">
+                                <br>
+                                ',get_r2(),'
+                            </div>';
+                            if(get_r3()!=NULL){
+                            echo '<div id="opciones">
+                                <input type="radio" name="respuesta" value="1">
+                                <br>
+                                ',get_r3(),'
+                            </div>';
+                            }
+                            if(get_r4()!=NULL){
+                            echo '<div id="opciones">
+                                <input type="radio" name="respuesta" value="1">
+                                <br>
+                                ',get_r4(),'
+                            </div>';
+                            }
+                        ?>
+                       
                     </div>
                     <div class="modal-footer" style="border: 0px;">
                         <button type="button" class="btn btn-primary" id="btn_responder">Responder</button>

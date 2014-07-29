@@ -5,8 +5,10 @@
  */
 
 
-$(document).on("click","#btn_responder",function(){
+$(document).on("click",".btn",function(){
+    
     var aux = document.getElementsByName("respuesta");
+    
     var r;
     for(var i=0; i<aux.length;i++){
         if(aux[i].checked){
@@ -14,11 +16,13 @@ $(document).on("click","#btn_responder",function(){
         }
     }
     
-    $.ajax({
-        type:"POST",
-        url:"../trivia/trivia.php",
-        data: {respondio:r}
-    })
+    aux = document.getElementById("modal-body");
+    
+    if(rc== r+1){
+        aux.innerHTML = "<h4>¡Correcto!</h4>";
+    }else{
+        aux.innerHTML = "<h4>¡Incorreto!</h4>";
+    }
 
 });
 
