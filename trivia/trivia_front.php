@@ -28,7 +28,7 @@ and open the template in the editor.
                 $('#myModal').modal('show');
             });
             
-            var rc = <?php echo $GLOBALS["reg"]["rc"]?>
+            //var rc = <?php //echo $GLOBALS["pregunta"][1]?>
             
         </script>
         <!-- Modal -->

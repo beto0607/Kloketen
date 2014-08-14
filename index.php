@@ -14,6 +14,22 @@ and open the template in the editor.
         
         <button class="boton_trivia"  value="Trivias">Trivias</button>
         <button class="boton_aventura"  value="Aventuras de texto">Aventuras de texto</button>
+        <button onclick="submit_form();">Submit</button>
+        <form name="myform" action="./aventura_texto/aventuras_front.php" method="GET">
+            <input type="" name="name" value="blabla" > 
+            <input type="" name="mision" value="asdfasdf">
+            <input type="hidden" name="id_bd" value="10">
+            
+        </form>
+        <script language="javascript">
+            <!--
+            function submit_form() 
+            {
+              document.myform.submit()
+            } 
+              -->
+        </script>
+        
         <script type="text/javascript" src="index.js">
     
         </script>

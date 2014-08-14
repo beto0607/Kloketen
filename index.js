@@ -5,34 +5,20 @@ $(document).ajaxError(function(e, jqxhr, settings, exception) {
 });
         
 $(document).on("click",".boton_aventura",function(){
-                
-                $.ajax({
-                    type:"POST",
-                    url:"./aventura_texto/aventuras_front.php",        
-                    data:{mision:'1', name: 'Jorge Perez'},
-                    success:function(response){alert("funco");},
-                    error: function(){
-                        $.ajax({
-                            type    :"POST",
-                            url:"./aventura_texto/aventuras_front.php",        
-                            data:{mision:'1', name: 'Jorge Perez'},
-                            success:function(response){alert("funco");}
-                        });}
-                });
-
-
-                window.location = './aventura_texto/aventuras_front.php';
-               return true;
-            });
+    //window.location.href = './aventura_texto/aventuras_front.php?name=Jorge Perez&mision=Arjé';
+    $.ajax({
+        type: 'POST', 
+        data: {name:"Juan",mision:"caca"},
+        url: "./aventura_texto/aventuras_front.php",
+        async: false,
+        complete: function(xhr, status){
+            $('#header').html(xht.responseText);
+        }
+    });
+    
+});
 $(document).on("click",".boton_trivia",       function (){
-                
-                $.ajax({
-                    type:"POST",
-                    url:"./trivia/trivia_front.php",
-                    data:{mision:'1'}
-                });
-                
-                window.location = './trivia/trivia_front.php';
-            }            );
+    window.location.href = './trivia/trivia_front.php?mision=1';
+});
 
             
