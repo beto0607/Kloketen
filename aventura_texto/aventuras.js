@@ -1,8 +1,8 @@
 
-var id_adv=1;
+var id_adv=0;
 $(document).ready(function(){
     $("#relato").fadeIn(1000);
-    centrar();  
+    
 });
  
 $(document).on("click", ".relato b",function(){

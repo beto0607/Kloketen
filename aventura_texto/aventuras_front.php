@@ -40,13 +40,17 @@ desc: antes de llamar se deben hacer 3 INPUT_POST, id_db: el id de la aventura, 
                         <input type=hidden name=id_php></form>";
                 ?>
                 <script type = text/javascript>
-                    var arrayJS=<?php echo json_encode($reg);?>;
-                    document.getElementById("parrafo").innerHTML = arrayJS[1];
+                    <?php 
+                        
+                    $js_array = json_encode($reg);
+                    echo "var arrayJS=$js_array;\n";
+                    ?>
+                    
+                    document.getElementById("parrafo").innerHTML = arrayJS[0];
+                    //alert(document.getElementById("parrafo").innerHTML);
                 </script>
             </div>
         </div>
-        <?php
-        // put your code here
-        ?>
+
     </body>
 </html>
