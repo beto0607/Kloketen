@@ -1,24 +1,32 @@
 <?php
-    $id_bd = filter_input(INPUT_GET, "id_bd");
-    if($id_bd == false){$id_bd=10;}
     mysql_connect("localhost","root","asd45asd"); 
-    mysql_select_db("MisionTexto");/*
-    $result = mysql_query("SELECT * FROM aventura WHERE id=$id_bd");
-    if(mysql_errno()==0){
+    mysql_select_db("MisionTexto");
+
+    $id_bd="1";
+    if(filter_input(INPUT_POST, "id_db")){
+        $id_bd=filter_input(INPUT_POST, "id_db");
+        $sql = "SELECT * FROM Mision WHERE idMision=".$id_bd;
+        $result = mysql_query($sql);
+        $result = mysql_fetch_array($result);
         
-        $reg = mysql_fetch_array($result, MYSQL_BOTH);
-        $reg = explode("**", $reg[1]);
-        array_unshift($reg, " ");
-    }else{}
-    */
-    $sql = "SELECT texto FROM Parrafo WHERE idAventura=1";
-    $result = mysql_query($sql);
-    $reg = array();
-    while($aux = mysql_fetch_array($result, MYSQL_BOTH)){
-        //array_unshift($reg, (mysql_escape_string($aux[0])));
-        $aux = htmlentities($aux[0]);
-        //$reg[] = $aux;
-        array_push($reg, $aux);
     }
-    
-    
+    if($result["estado"]==-1){
+        $id_bd= FALSE;
+    }else{
+
+        $sql = "SELECT * FROM Parrafo WHERE idAventura=".$id_bd;
+
+        $result = mysql_query($sql);
+        $reg = array();
+        while($aux = mysql_fetch_array($result, MYSQL_BOTH)){
+            $arr = array($aux["texto"]);
+            if($aux['imagen']){
+                array_push($arr, $aux["imagen_tipo"], $aux["imagen"]);
+            }
+            if($aux['sonido']){
+                array_push($arr, $aux["sonido_tipo"], $aux["sonido"]);
+            }
+            array_push($reg, $arr);
+        }
+        echo FALSE;
+    }

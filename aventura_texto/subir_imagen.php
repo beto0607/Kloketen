@@ -26,7 +26,7 @@ else{
         // Escapamos los caracteres para que se puedan almacenar en la base de datos correctamente.
         $data = mysql_escape_string($data);
         // Insertamos en la base de datos.
-        $aux = $_FILE['imagen']['name'];
+        $aux = $_FILES['imagen']['name'];
         $resultado = @mysql_query("INSERT INTO imagen (nombre, imagen, tipo) VALUES ('$aux','$data', '$tipo')");
         if ($resultado){
             echo "El archivo ha sido copiado exitosamente.";

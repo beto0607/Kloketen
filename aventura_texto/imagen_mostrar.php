@@ -1,21 +1,15 @@
 <?php
-// Conexion a la base de datos
-mysql_connect("localhost", "root", "asd45asd") or die(mysql_error());
 
-mysql_select_db("example") or die(mysql_error());
- 
-if ($_GET['id'] > 0)
-{
-    // Consulta de búsqueda de la imagen.
-    $consulta = "SELECT imagen FROM imagen WHERE id={$_GET['id']}";
-    $resultado = @mysql_query($consulta) or die(mysql_error());
-    $datos = mysql_fetch_assoc($resultado);
- 
-    $imagen = $datos['imagen']; // Datos binarios de la imagen.
-    //$tipo = $datos['tipo_imagen'];  // Mime Type de la imagen.
-    // Mandamos las cabeceras al navegador indicando el tipo de datos que vamos a enviar.
+
+include './aventuras_back.php';
+
+$aux_i = filter_input(INPUT_GET, "name")-1;
+
+if($reg[$aux_i][2]){
+    header("Content-type:".$reg[$aux_i][1]);
+    echo $reg[$aux_i][2];
+}else{
     header("Content-type: image/jpg");
-    // A continuación enviamos el contenido binario de la imagen.
-    echo $imagen;
+    echo "NULL";
 }
 ?>

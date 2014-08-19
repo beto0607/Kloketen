@@ -6,6 +6,20 @@ body{
     background: #19192D;
     position: fixed;
 }
+#imagen{
+    position: fixed; 
+    right: 5%;
+    bottom: -5%;
+    border-radius:60%;
+    overflow:hidden;
+    width:400px;
+    
+}
+#img{
+    position: relative;
+    right: 25%;
+    top: -30px;
+}
 #back1{
     position: fixed;
     right: -10%;
@@ -25,8 +39,6 @@ body{
     margin: auto;
     font:  22px Ubuntu;
     text-align: center;
-    
-    
 }
 .relato{
     position: relative;
@@ -123,4 +135,36 @@ body{
     border: 6px solid #00FFFF;
     color: #00FFFF;
     
+}
+
+#h1{
+    position:absolute;
+    color: #B8EAEB;
+    font-family: Ubuntu;
+    width: 20vw;
+    left: 37.5vw;
+    top:10vh;
+    display: block;
+    text-align: center;
+    font-size: 2vh;
+}
+#mascara2{
+    cursor: pointer;
+    width: auto;
+    height: 30vh;
+}
+#a{
+    color: #B8EAEB;
+    margin: auto;
+    font-family:  Ubuntu;
+    
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+#a:hover
+{
+    color: #00FFFF;
+    text-decoration: underline;
+    font-weight: bold;
 }
