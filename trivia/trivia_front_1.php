@@ -24,6 +24,26 @@ and open the template in the editor.
             
         ?>
         
+        <script type="text/javascript">
+            $(window).load(function(){
+               // $('#myModal').modal('show');
+            });
+            
+            
+            
+        </script>
+        <?php 
+            function respuesta(){
+                for($i=0;$i<6;$i++){
+                    echo '
+                    <input class="respuesta" type="radio" name="respuesta" value="1">
+
+                    Respuesta_'.get_r1().'<br>';
+                }
+            }
+        ?>
+
+        
         <img id="back2" src="disco magico.png"></img>
         <img id="back1" src="disco magico.png"></img>
         <div id="contenedor" > <!-- Comienza CONTENEDOR -->
@@ -36,15 +56,26 @@ and open the template in the editor.
                 <button id="button_volver" onclick="document.location='http://boemiz.com/shared-folder/kloketen/'">Volver</button>
             </div>
             <div id='pierna'>
-                <div class="pregunta" id="facil" value="1">
-                    <?php require_once 'div_facil.php';?>
+                <?php require_once 'div_facil.php';?>
+                <div class="pregunta" id='facil'>
+                    <img src="facil.png">
+                    <preg class="p_txt"><?php echo ($facil[$facil_num][0]); ?></preg>
+                    <respuestas id="trivia_facil" value="<?php echo $facil[$facil_num][2];?>">
+                        <?php
+                            foreach ($facil[$facil_num][1] as $val){
+                                echo '<input class="respuesta" type="radio" name="respuestafacil" value="'.$val[1].'">
+                                '.($val[0]).'<br>';
+                            }
+                        ?>
+                    </respuestas>
+                    <button type="button" class="btn" id="btn_responder"value="facil">Responder</button>
                 </div>
                 <div class="pregunta" id='medio' >
                     <img src="medio.png">
-                    <preg class="p_txt"><?php echo ($medio[$medio_num][0]); ?></preg>
+                    <preg class="p_txt"><?php echo ($medio[$facil_num][0]); ?></preg>
                     <respuestas id="trivia_medio" value="<?php echo $medio[$medio_num][2];?>">
                         <?php
-                            foreach ($medio[$medio_num][1] as $val){
+                            foreach ($medio[$facil_num][1] as $val){
                                 echo '<input id="respuesta" type="radio" name="respuestamedio" value="'.$val[1].'">
                                 '.($val[0]).'<br>';
                             }
@@ -54,10 +85,10 @@ and open the template in the editor.
                 </div>
                 <div class="pregunta" id='dificil'>
                     <img src="dificil.png">
-                    <preg class="p_txt"><?php echo ($dificil[$dificil_num][0]); ?></preg>
+                    <preg class="p_txt"><?php echo ($dificil[0][0]); ?></preg>
                     <respuestas id="trivia_dificil" value="<?php echo $dificil[$dificil_num][2];?>">
                         <?php
-                            foreach ($dificil[$dificil_num][1] as $val){
+                            foreach ($dificil[0][1] as $val){
                                 echo '<input class="respuesta" type="radio" name="respuestadificil" value="'.$val[1].'">
                                 '.($val[0]).'<br>';
                             }

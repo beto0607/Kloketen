@@ -3,40 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 $(document).on("click",".btn",function(){
+    var btn_val = $(this).attr("value");
+    var radios = document.getElementsByName("respuesta"+btn_val);
+    for(var i = 0; i < radios.length;i++){
 
-
-    
-    var aux = document.getElementsByName("respuesta");
-    
-    var r;
-    for(var i=0; i<aux.length;i++){
-        if(aux[i].checked){
-           r=i; 
+        if(radios[i].checked){
+            var state=-1;
+            var idt = $(document.getElementById("trivia_"+btn_val)).attr("value");
+            if(radios[i].value==1){state=1;}
+            $.ajax({
+                url: "cambiar_estado.php",
+                type: "POST",
+                data: {estado: state, idTrivia: idt, dif: btn_val[0]},
+                success:function(aux){
+                    alert(aux);
+                    jQuery("#"+btn_val).load("div_facil.php");
+                }
+            });
         }
+        
     }
     
-    aux = document.getElementById("modal-body");
-    if(rc== r+1){
-        aux.innerHTML = "<h4>¡Correcto!</h4>";
-    }else{
-        aux.innerHTML = "<h4>¡Incorreto!</h4>";
-    }
-    aux = document.getElementById("btn_responder");
-    if(aux.innerHTML === "Otra pregunta"){
-        document.location.reload();
-    }else{
-        aux.innerHTML = "Otra pregunta";
-    }
+    alert(jQuery("#"+btn_val).attr("value"));
+    
+    
 });
 
 
-
-
-
-$(".modal-wide").on("show.bs.modal", function() {
-  var height = $(window).height() - 200;
-  $(this).find(".modal-body").css("max-height", height);
-});

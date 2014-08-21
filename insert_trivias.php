@@ -29,6 +29,12 @@ and open the template in the editor.
                 input.type = "hidden";
                 input.name = "cant";
                 r.appendChild(input);
+                input = document.createElement("input");        
+                input.type="text";
+                input.name="pregunta";
+                r.appendChild(document.createTextNode("Pregunta: "));
+                r.appendChild(input);
+                r.appendChild(document.createElement("br"));
                 for (var i=1; i<= cant.value; i++){
                     input = document.createElement("input");
                     input.type="text";
